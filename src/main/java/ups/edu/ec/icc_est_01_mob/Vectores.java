@@ -14,24 +14,69 @@ public class Vectores {
         System.out.println("Se creo la clase Vectores");
     }
     
-    public void ordenamientoBurbuja() {
-        int n = vector.length;
-        boolean swapped;
-        for (int i = 0; i < n - 1; i++) {
-            swapped = false;
-            for (int j = 0; j < n - 1 - i; j++) {
-                if (vector[j] > vector[j + 1]) {
-                    int temp = vector[j];
-                    vector[j] = vector[j + 1];
-                    vector[j + 1] = temp;
-                    swapped = true;
+      public void ordenamientoBurbuja(){
+
+        int tamanio = vector.length;
+
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = i+1; j < tamanio ; j++) {
+                if (vector[i] > vector[j]) {
+                    int aux = vector[i];
+                    vector [i] = vector[j];
+                    vector [j] = aux;
+                    
                 }
+                
             }
-            if (!swapped) {
-                break;
-            }
+            
         }
+        
     }
+      
+      
+     public void ordenamientoBurbujaM(){
+
+        int tamanio = vector.length;
+
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = i+1; j < tamanio ; j++) {
+                if (vector[i] < vector[j]) {
+                    int aux = vector[i];
+                    vector [i] = vector[j];
+                    vector [j] = aux;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+     
+     
+     
+     
+     
+      public void ordenamientoBurbujaPalabras(){
+
+        int tamanio = vector.length;
+
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = i+1; j < tamanio ; j++) {
+                if (vector[i] > vector[j]) {
+                    int aux = vector[i];
+                    vector [i] = vector[j];
+                    vector [j] = aux;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+
+    
     
     
     public void imprimirVector() {
